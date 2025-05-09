@@ -392,6 +392,16 @@ public class RNDataWedgeIntentsModule extends ReactContextBaseJavaModule impleme
         this.reactContext.registerReceiver(genericReceiver, filter);
     }
 
+    @ReactMethod
+    public void addListener(String eventName) {
+        // No-op if not emitting events
+    }
+
+    @ReactMethod
+    public void removeListeners(double count) {
+        // No-op if not emitting events
+    }
+
     private void unregisterReceivers() {
         unregisterReceiver(myEnumerateScannersBroadcastReceiver);
         unregisterReceiver(scannedDataBroadcastReceiver);
